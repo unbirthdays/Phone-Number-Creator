@@ -11,7 +11,7 @@ Don’t forget the space after the closing parentheses!
 
 function createPhoneNumber(arr) {
     if (arr.length !== 10) {
-        console.log("Phone number must have 10 digits.")
+        throw new Error("Phone number must have 10 digits.");
     } else {
         const firstThreeDigits = arr.slice(0,3).join("");
         const secondThreeDigits = arr.slice(3,6).join("");
@@ -21,4 +21,4 @@ function createPhoneNumber(arr) {
     }
 }
 
-console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9]));
